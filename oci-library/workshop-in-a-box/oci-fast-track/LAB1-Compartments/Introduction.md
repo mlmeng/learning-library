@@ -19,6 +19,7 @@ Our goal is for attendees, at the end of this workshop, to be able to deploy the
 This lab will require the user to dowlonad and install :
 
 - PuTTY and PuTTY KeyGen (for Windows Users)
+- Mac and Linux users can use the native ssh utility in Terminal
 
 ## Putty ## 
 
@@ -33,29 +34,35 @@ This LAB will use 2 different images :
 - Oracle Linux 7.6
 - Microsoft Windows 2016 Standard
 
-## Lab 1. Accessing Oracle Cloud
+## Lab 1. Accessing Oracle Cloud, Learning OCI Basics, and Creating a Compartment
 
-## Objectives ##
+**Objectives**
 
-- Acess Oracle Cloud Console
+- Sign in to and explore the OCI console
+- Become acquainted with the OCI Interface and OCI basics including regions, Availability Domains and compartments
+- Create a compartment to work with for the following labs
+
+## Accessing Oracle Cloud ##
+
+**Objectives**
+- Access Oracle Cloud Console
 - Explore IaaS and PaaS Services
 - Become acquainted with the OCI Interface
 
-
 In this Section, you will learn more about the initial steps to access the Oracle Cloud Portal
 
-In your preferred browser, type: cloud.oracle.com, or www.oracle.com.  You can also change your language:
+1. In your preferred browser, type: cloud.oracle.com, or www.oracle.com.  You can also change your language:
  
  ![](images/Browser.png)
 
 
-Hit the “Sign in to Cloud” link, and you will be redirected to the Cloud Connection screen, as follows:
+2. Hit the “Sign in to Cloud” link, and you will be redirected to the Cloud Connection screen, as follows:
 
  ![](images/tenant_id.png)
 
  For more recently deployed environments, logging in must be done through  *"Identity Cloud Service Account"*. Where it will be necessary to input *Account Name* (which is the defined name for the Tenant).
 
-After Tenant identification, you’ll be able to input username and password for environment access.
+3. After Tenant identification, you’ll be able to input username and password for environment access.
 
 ![](images/user_password.png)
 
@@ -63,20 +70,22 @@ Once identified, you’ll reach Oracle’s Cloud main screen, from where you can
 
 ![](images/oci_console.png)
 
-From the *Action Menu* (Top left corner), you can reach the available services on our console.
+4. From the *Action Menu* (Top left corner), you can reach the available services on our console.
 
 ![](images/act_menu.png)
 
 ## Understanding OCI Basic Concepts
 
 **Objectives**
+
+- Understand Regions
 - Understand Availability Domain (AD) concept
 - Understand Compartments
-- Understand Fault Domains
 
 In this section you’ll learn about OCI’s  high availability architecture.
 
 **Regions**
+
 Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area and is composed of one or more availability domains. Most Oracle Cloud Infrastructure resources are either region-specific, such as a virtual cloud network, or availability domain-specific, such as a compute instance.
 Regions are completely independent of other regions and can be separated by vast distances—across countries or even continents. Generally, you would deploy an application in the region where it is most heavily used, since using nearby resources is faster than using distant resources. However, you can also deploy applications in different regions to:
 - mitigate the risk of region-wide events, such as large weather systems or earthquakes.
@@ -85,7 +94,8 @@ After acessing the environment, it's possible to change your region with just on
 
 ![](images/change_regio.png)
 
-## Availability Domains
+**Availability Domains**
+
 In a Region, you may have up to three Availability Domains. 
 
 The availability domains within a region are connected to each other by a low latency, high bandwidth network, which makes it possible to provide high-availability connectivity to the Internet and customer premises, and to build replicated systems in multiple availability domains for both high-availability and disaster recovery. 
@@ -108,15 +118,16 @@ Compartments are global, across regions, and when you create a compartment, it i
 ![](images/compart.png)
 
 ## Creating Compartments
-On the main menu, Hit “Identity”, then choose  “Compartments”
+
+5. On the main menu, Hit **Identity**, then choose **Compartments**
 
 ![](images/create_compart.png)
 
-Click on *“Create Compartment”* and fill in the information:
+6. Click on **Create Compartment** and fill in the information:
 
-Name: Compartimento-Trial
+Name: \<name your comparment\>
 
-Description: Compartment for resource testing
+Description: \<provide a description\>
 
 Parent Compartment: root
 
